@@ -1,0 +1,10 @@
+[user]
+	email = liutunhank@gmail.com
+	name = canispeakchinese
+
+[alias]
+    st = status      ; 'git st' 代替 'git status'
+    co = checkout    ; 'git co' 代替 'git checkout'
+    br = branch      ; 'git br' 代替 'git branch'
+    ci = commit      ; 'git ci' 代替 'git commit'
+    l = log --oneline --graph --decorate --all  ; 'git l' 显示简洁的提交历史
