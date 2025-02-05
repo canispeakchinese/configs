@@ -98,7 +98,7 @@ source $ZSH/oh-my-zsh.sh
 fzf-history-widget() {
   # 使用 history 获取命令历史，去掉编号部分并通过 fzf 进行实时搜索
   local selected
-  selected=$(history | sed 's/^[ ]*[0-9]\+[ ]*//' | fzf --height 40% --border --query="$LBUFFER" --no-sort)
+  selected=$(history | sed 's/^[ ]*[0-9]\+[ ]*//' | fzf --height 40% --query="$LBUFFER" --no-sort)
 
   # 如果选中了一条命令，将其显示在命令行输入栏
   if [[ -n "$selected" ]]; then
@@ -108,7 +108,7 @@ fzf-history-widget() {
 }
 zle -N fzf-history-widget
 
-# 绑定 Ctrl+R 快捷键触发 fzf-history-widget 函数
+# 绑定快捷键（例如 Ctrl+R）到 fzf-history-widget
 bindkey '^R' fzf-history-widget
 
 # User configuration
