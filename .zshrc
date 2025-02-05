@@ -146,6 +146,27 @@ export PATH=$PATH:$GOROOT/bin
 
 alias del="rm -rf"
 
+set_proxy() {
+    local ip_address
+    ip_address=$(ip route | grep default | awk '{print $3}')
+
+    # 设置 http_proxy 和 http_proxys 环境变量
+    export http_proxy="socks5://$ip_address:10808"
+    export http_proxys="socks5://$ip_address:10808"
+
+    # 配置 Git 使用代理
+    git config --global core.sshCommand "ssh -o ProxyCommand='nc -X 5 -x $ip_address:10808 %h %p'"
+}
+
+unset_proxy() {
+    # 取消环境变量 http_proxy 和 http_proxys 设置
+    unset http_proxy
+    unset http_proxys
+
+    # 移除 Git 中的代理配置
+    git config --global --unset core.sshCommand
+}
+
 # 定义 Git 信息显示函数
 git_prompt_info() {
   local branch git_status
