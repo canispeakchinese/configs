@@ -116,5 +116,7 @@
     "C_Cpp.intelliSenseEngine": "disabled",
     "clangd.path": "/usr/bin/clangd",
     "clangd.arguments": ["--header-insertion=never"],
+    "C_Cpp.clang_format_path": "/usr/bin/clang-format",
     "C_Cpp.formatting": "clangFormat",
+    "editor.formatOnSave": true,
 }
