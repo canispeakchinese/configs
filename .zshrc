@@ -98,7 +98,7 @@ source $ZSH/oh-my-zsh.sh
 fzf-history-widget() {
   # 使用 history 获取命令历史，去掉编号部分并通过 fzf 进行实时搜索
   local selected
-  selected=$(history | sed 's/^[ ]*[0-9]\+[ ]*//' | fzf --height 40% --query="$LBUFFER" --no-sort)
+  selected=$(fc -rl 1 | sed 's/^[ ]*[0-9]\+[ ]*//' | fzf --height 40% --query="$LBUFFER" --no-sort)
 
   # 如果选中了一条命令，将其显示在命令行输入栏
   if [[ -n "$selected" ]]; then
@@ -152,7 +152,7 @@ set_proxy() {
 
     # 设置 http_proxy 和 http_proxys 环境变量
     export http_proxy="socks5://$ip_address:10808"
-    export http_proxys="socks5://$ip_address:10808"
+    export https_proxy="socks5://$ip_address:10808"
 
     # 配置 Git 使用代理
     git config --global core.sshCommand "ssh -o ProxyCommand='nc -X 5 -x $ip_address:10808 %h %p'"
@@ -161,7 +161,7 @@ set_proxy() {
 unset_proxy() {
     # 取消环境变量 http_proxy 和 http_proxys 设置
     unset http_proxy
-    unset http_proxys
+    unset https_proxy
 
     # 移除 Git 中的代理配置
     git config --global --unset core.sshCommand
@@ -199,4 +199,5 @@ precmd() {
 
 # 设置命令提示符
 PROMPT='%F{cyan}%n%f %F{yellow}%~%f $(git_prompt_info) $(exit_status_prompt) '  # 左侧提示符（去除主机名）
-RPROMPT='%F{blue}[%D{%Y-%m-%d %H:%M}]%f'  # 右侧显示当前日期和时间
+RPROMPT='%F{blue}[%D{%Y-%m-%d %H:%M}]%f'  # 右侧显示当前日期和时间export DISPLAY=10.255.255.254:0
+export DISPLAY=10.255.255.254:0

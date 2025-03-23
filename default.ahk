@@ -26,6 +26,8 @@ CapsLock & h::Send "^h"
 CapsLock & j::Send "^j"
 CapsLock & k::Send "^k"
 CapsLock & l::Send "^l"
+;回到gd跳转之前的位置
+CapsLock & o::Send "^o"
 ;历史命令搜索
 CapsLock & r::Send "^r"
 ;终端往右移动一个单词
