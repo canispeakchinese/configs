@@ -4,7 +4,8 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
-                "/home/liutun/my_code/cpp/muduo"
+                "/home/liutun/my_code/cpp/muduo",
+                "/home/liutun/my_code/cpp/pjproject"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/g++",
