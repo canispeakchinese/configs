@@ -9,4 +9,4 @@
     ci = commit      ; 'git ci' 代替 'git commit'
     l = log --oneline --graph --decorate --all  ; 'git l' 显示简洁的提交历史
 [core]
-	sshCommand = ssh -o ProxyCommand='nc -X 5 -x 172.28.112.1:10808 %h %p'
+	sshCommand = ssh -o ProxyCommand='nc -X 5 -x 192.168.194.2:10808 %h %p'

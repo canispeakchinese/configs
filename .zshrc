@@ -204,4 +204,3 @@ precmd() {
 # 设置命令提示符
 PROMPT='%F{cyan}%n%f %F{yellow}%~%f $(git_prompt_info) $(exit_status_prompt) '  # 左侧提示符（去除主机名）
 RPROMPT='%F{blue}[%D{%Y-%m-%d %H:%M}]%f'  # 右侧显示当前日期和时间export DISPLAY=10.255.255.254:0
-export DISPLAY=10.255.255.254:0
