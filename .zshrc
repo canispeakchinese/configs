@@ -146,6 +146,10 @@ export PATH=$PATH:$GOROOT/bin
 
 alias del="rm -rf"
 
+start_proxy() {
+    sudo sing-box run -c ~/vpn_config.json >/dev/null 2>&1
+}
+
 set_proxy() {
     local ip_address
     ip_address=$(ip route | grep default | awk '{print $3}')
