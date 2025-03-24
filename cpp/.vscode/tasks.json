@@ -13,7 +13,12 @@
                 "-lboost_system",
                 "-lboost_coroutine",
                 "-lboost_context",
-                "-I/home/liutun/my_code/cpp/task_flow/taskflow"
+                "-I/home/liutun/my_code/cpp/task_flow/taskflow",
+                "`pkg-config", // 命令分解为多部分
+                "--libs",
+                "--cflags",
+                "--static",
+                "libpjproject`" // 替换为实际库名（如 libpjproject）
             ],
             "options": {
                 "cwd": "${fileDirname}"
@@ -40,7 +45,12 @@
                 "-lboost_system",
                 "-lboost_coroutine",
                 "-lboost_context",
-                "-I/home/liutun/my_code/cpp/task_flow/taskflow"
+                "-I/home/liutun/my_code/cpp/task_flow/taskflow",
+                "`pkg-config", // 命令分解为多部分
+                "--libs",
+                "--cflags",
+                "--static",
+                "libpjproject`" // 替换为实际库名（如 libpjproject）
             ],
             "options": {
                 "cwd": "${fileDirname}"

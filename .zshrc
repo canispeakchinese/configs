@@ -140,9 +140,15 @@ bindkey '^R' fzf-history-widget
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# go开发环境变量配置
 export GOROOT=~/.go1.23.3
 export GOPATH=~/my_code/go
 export PATH=$PATH:$GOROOT/bin
+
+# cpp开发环境变量配置
+export PJPROJECT_HOME=/usr/local
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$PJPROJECT_HOME/lib
+export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH
 
 alias del="rm -rf"
 
@@ -203,4 +209,4 @@ precmd() {
 
 # 设置命令提示符
 PROMPT='%F{cyan}%n%f %F{yellow}%~%f $(git_prompt_info) $(exit_status_prompt) '  # 左侧提示符（去除主机名）
-RPROMPT='%F{blue}[%D{%Y-%m-%d %H:%M}]%f'  # 右侧显示当前日期和时间export DISPLAY=10.255.255.254:0
+RPROMPT='%F{blue}[%D{%Y-%m-%d %H:%M}]%f'  # 右侧显示当前日期和时间
