@@ -6,7 +6,7 @@
 !c::Send "^c"
 !v::Send "^v"
 !s::Send "^s"
-;!f::Send "^f" 
+!f::Send "^f"
 !z::Send "^z"
 !w::Send "^w"
 !r::Send "^r"
