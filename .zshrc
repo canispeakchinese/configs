@@ -151,6 +151,8 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$PJPROJECT_HOME/lib
 export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH
 
 alias del="rm -rf"
+alias vi="vim"
+alias jupyter="jupyter lab --port=8888 --no-browser --NotebookApp.token=''"
 
 start_proxy() {
     sudo sing-box run -c ~/vpn_config.json >/dev/null 2>&1
