@@ -5,7 +5,8 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "/home/liutun/my_code/cpp/muduo",
-                "/home/liutun/my_code/cpp/pjproject"
+                "/home/liutun/my_code/cpp/pjproject",
+                "/home/liutun/my_code/cpp/taskflow"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/g++",

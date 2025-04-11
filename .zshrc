@@ -141,7 +141,7 @@ bindkey '^R' fzf-history-widget
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # go开发环境变量配置
-export GOROOT=~/.go1.23.3
+export GOROOT=~/.go1.24.2
 export GOPATH=~/my_code/go
 export PATH=$PATH:$GOROOT/bin
 
