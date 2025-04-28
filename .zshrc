@@ -143,7 +143,7 @@ bindkey '^R' fzf-history-widget
 # go开发环境变量配置
 export GOROOT=~/.go1.24.2
 export GOPATH=~/my_code/go
-export PATH=$PATH:$GOROOT/bin
+export PATH=$GOROOT/bin:$PATH
 
 # cpp开发环境变量配置
 export PJPROJECT_HOME=/usr/local
@@ -153,6 +153,15 @@ export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH
 alias del="rm -rf"
 alias vi="vim"
 alias jupyter="jupyter lab --port=8888 --no-browser --NotebookApp.token=''"
+
+gocustomer() {
+  export GOROOT=~/.go_source_code
+  export PATH=$GOROOT/bin:$PATH
+}
+gooriginal() {
+  export GOROOT=~/.go1.24.2
+  export PATH=$GOROOT/bin:$PATH
+}
 
 start_proxy() {
     sudo sing-box run -c ~/vpn_config.json >/dev/null 2>&1
