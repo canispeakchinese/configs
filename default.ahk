@@ -15,6 +15,8 @@
 ;文件、命令搜索
 !p::Send "^p"
 !+p::Send "^+p"
+;默认运行代码
+F5::send "^{F5}"
 ;光标移动到终端以及第1、2、3个编辑器
 CapsLock & m::Send "^m"
 CapsLock & 0::Send "^0"
